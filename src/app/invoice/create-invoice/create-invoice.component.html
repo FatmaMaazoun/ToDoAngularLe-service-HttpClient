@@ -1,0 +1,17 @@
+<pre>
+<h1>Add Invoice</h1>
+<form #f="ngForm">
+    <label>idInvoice</label><input type="number" ngModel name="id"  #id="ngModel" />
+    <hr/>
+    <label>discountAmount</label><input type="number" ngModel name="discountAmount"  #discountAmount="ngModel" />
+    <hr/>
+    <label>billAmount</label><input type="number" ngModel name="billAmount"  #billAmount="ngModel" />
+    <hr/>
+    <label>dateBill</label> <input type="text" ngModel name="dateBill"  #dateBill="ngModel" />
+    <hr/>
+    <label>Status</label><select name="status" ngModel><option [ngValue]="true">true</option><option [ngValue]="false" >false</option></select>
+  
+   
+    </form>
+    <button (click)="addinvoice(f.value)">Add</button>
+</pre>

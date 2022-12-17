@@ -1,0 +1,28 @@
+
+<h1>list of Invoices</h1>
+<table>
+  <tr>
+    <th>idInvoice</th>
+    <th>discountAmount</th>
+    <th>billAmount</th>
+    <th>dateBill</th>
+    <th>Status</th>
+  </tr>
+  <ng-container *ngFor="let i of invoices">
+   <tr>
+    <td>{{i.id}}</td>
+    <td> {{i.discountAmount}}  </td>
+    <td> {{i.billAmount}}</td>
+    <td>{{i.dateBill}}</td>
+    <td>{{i.Status}}</td>
+    <td><a routerLink="/detail/{{i.id}}">details</a></td>
+    <td><a routerLink="/remove/{{i.id}}">remove</a></td>
+    <td><a routerLink="/update/{{i.id}}">update</a></td>
+
+  </tr>
+  </ng-container>
+  
+ 
+</table>
+
+<button routerLink="/addInvoice">Add Invoice</button>
